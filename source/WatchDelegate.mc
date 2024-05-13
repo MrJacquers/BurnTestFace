@@ -12,7 +12,7 @@ class WatchDelegate extends WatchFaceDelegate {
     settings.loadSettings();
 
     var idx = settings.colorNames.indexOf(settings.bgColorName);
-    idx = (idx + 1) % 14;
+    idx = (idx + 1) % settings.colorNames.size();
     settings.setValue("BGColorName", settings.colorNames[idx]);
 
     return true;

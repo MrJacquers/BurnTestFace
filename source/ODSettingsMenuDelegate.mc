@@ -14,7 +14,7 @@ class ODSettingsMenuDelegate extends WatchUi.Menu2InputDelegate {
 
       // cycle through colors
       var idx = settings.colorNames.indexOf(settings.bgColorName);
-      idx = (idx + 1) % 14;
+      idx = (idx + 1) % settings.colorNames.size();
       item.setSubLabel(settings.colorNames[idx]);
       settings.setValue("BGColorName", settings.colorNames[idx]);
     }
